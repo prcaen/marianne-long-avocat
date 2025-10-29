@@ -1,16 +1,31 @@
 import React from 'react'
+import { Routes, Route } from 'react-router-dom'
 import Hero from './components/Hero'
 import ExpertiseGrid from './components/ExpertiseGrid'
 import ApproachSection from './components/ApproachSection'
 import TestimonialsCarousel from './components/TestimonialsCarousel'
+import Footer from './components/Footer'
+import LegalMentions from './components/LegalMentions'
 
-function App() {
+const Home: React.FC = () => {
   return (
-    <div className="min-h-screen">
+    <>
       <Hero />
       <ExpertiseGrid />
       <ApproachSection />
       <TestimonialsCarousel />
+    </>
+  )
+}
+
+function App() {
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/mentions-legales" element={<LegalMentions />} />
+      </Routes>
+      <Footer />
     </div>
   )
 }
