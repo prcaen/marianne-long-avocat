@@ -17,7 +17,7 @@ src/
 ├── components/
 │   ├── Hero.tsx                 # Section hero avec CTAs
 │   ├── ContactForm.tsx          # Formulaire de contact avec validation
-│   ├── CalendlyWidget.tsx      # Intégration Calendly
+│   ├── CalendlyWidget.tsx      # Intégration Cal.com
 │   ├── ProfessionalTimeline.tsx # Timeline du parcours professionnel
 │   ├── ExpertiseGrid.tsx       # Grille des domaines d'expertise
 │   ├── ApproachSection.tsx     # Section approche différenciante
@@ -48,18 +48,20 @@ npm install
 - `npm run preview` - Prévisualiser le build de production
 - `npm run lint` - Linter le code
 
-## 🔧 Configuration Calendly
+## 🔧 Configuration Cal.com
 
-Pour intégrer Calendly, modifiez l'URL dans `src/components/CalendlyWidget.tsx` :
+Pour intégrer Cal.com, modifiez l'URL dans `src/components/CalendlyWidget.tsx` :
 
 ```typescript
-const calendlyUrl = 'https://calendly.com/VOTRE_USERNAME'
+const calUrl = 'https://cal.com/VOTRE_USERNAME'
+// Ou pour un événement spécifique :
+const calUrl = 'https://cal.com/VOTRE_USERNAME/EVENT_SLUG'
 ```
 
 ## 📄 Documentation des Composants
 
 ### Hero
-Section principale avec présentation et deux CTAs (Contact et RDV Calendly).
+Section principale avec présentation et deux CTAs (Contact et RDV Cal.com).
 
 **Props**: Aucune
 
@@ -76,7 +78,7 @@ Formulaire de contact avec validation côté client.
 - Téléphone optionnel
 
 ### CalendlyWidget
-Widget Calendly en iframe avec modal.
+Widget Cal.com en iframe avec modal.
 
 **Props**:
 - `onClose: () => void` - Fonction de fermeture du modal
@@ -104,7 +106,7 @@ Carrousel de témoignages avec navigation et animations.
 ## 🎯 Objectifs de Conversion
 
 - ✅ Crédibilité via parcours prestigieux (Timeline)
-- ✅ Prise de RDV directe sans barrière (Calendly)
+- ✅ Prise de RDV directe sans barrière (Cal.com)
 - ✅ Image moderne et accessible (Design + Formulaires)
 - ✅ Architecture modulaire pour extensions futures
 

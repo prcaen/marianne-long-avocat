@@ -6,8 +6,9 @@ interface CalendlyWidgetProps {
 }
 
 const CalendlyWidget: React.FC<CalendlyWidgetProps> = ({ onClose }) => {
-  // Replace 'YOUR_CALENDLY_USERNAME' with actual Calendly username/event
-  const calendlyUrl = 'https://calendly.com/YOUR_CALENDLY_USERNAME'
+  // Replace 'YOUR_CAL_USERNAME' with actual Cal.com username
+  // You can also add an event slug: 'https://cal.com/YOUR_CAL_USERNAME/EVENT_SLUG'
+  const calUrl = 'https://cal.com/YOUR_CAL_USERNAME'
 
   return (
     <AnimatePresence>
@@ -37,9 +38,10 @@ const CalendlyWidget: React.FC<CalendlyWidgetProps> = ({ onClose }) => {
 
           <div className="h-full w-full">
             <iframe
-              src={calendlyUrl}
+              src={`${calUrl}?embed=true`}
               className="w-full h-full border-0"
-              title="Calendly Scheduling"
+              title="Cal.com Scheduling"
+              allow="camera; microphone; geolocation"
             />
           </div>
         </motion.div>

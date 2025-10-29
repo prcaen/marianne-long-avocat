@@ -17,13 +17,13 @@ Chaque composant est indépendant et réutilisable. Ils utilisent des interfaces
 **Fonctionnalités** :
 - Présentation du nom et du titre professionnel
 - Description du positionnement unique
-- Deux CTAs : Contact et Prise de RDV (Calendly)
+- Deux CTAs : Contact et Prise de RDV (Cal.com)
 - Logo conceptuel illustratif
 - Animations d'apparition au chargement
 
 **État local** :
 - `showContactForm: boolean` - Contrôle l'affichage du formulaire de contact
-- `showCalendly: boolean` - Contrôle l'affichage du widget Calendly
+- `showCalendly: boolean` - Contrôle l'affichage du widget Cal.com
 
 **Modals** :
 - Intégration conditionnelle de `ContactForm` et `CalendlyWidget`
@@ -72,7 +72,7 @@ interface ContactFormProps {
 
 ## 3. CalendlyWidget (`CalendlyWidget.tsx`)
 
-**Rôle** : Intégration Calendly via iframe.
+**Rôle** : Intégration Cal.com via iframe.
 
 **Props** :
 ```typescript
@@ -82,8 +82,9 @@ interface CalendlyWidgetProps {
 ```
 
 **Configuration** :
-- URL Calendly à configurer dans le composant
-- Remplacez `YOUR_CALENDLY_USERNAME` par l'identifiant réel
+- URL Cal.com à configurer dans le composant
+- Remplacez `YOUR_CAL_USERNAME` par votre identifiant Cal.com
+- Format : `https://cal.com/USERNAME` ou `https://cal.com/USERNAME/EVENT_SLUG`
 
 **Comportement** :
 - Modal plein écran responsive
