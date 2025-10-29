@@ -43,8 +43,8 @@ const ApproachSection: React.FC = () => {
             className="space-y-6"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              L'avocate qui comprend{' '}
-              <span className="text-primary">les deux côtés</span>
+              Votre avocat IT qui maitrise les enjeux{' '}
+              <span className="text-primary">juridique et business</span>
             </h2>
             <p className="text-lg leading-relaxed text-light/90">
               Unique dans son positionnement, je combine une expertise juridique approfondie 
