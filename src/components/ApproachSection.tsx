@@ -1,27 +1,28 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { Eye, Zap, Target, Handshake } from 'lucide-react'
 
 const ApproachSection: React.FC = () => {
   const differentiatingPoints = [
     {
       title: 'Vision 360°',
       description: 'Expérience unique côté client ET prestataire pour une compréhension globale des enjeux',
-      icon: '👁️',
+      icon: Eye,
     },
     {
       title: 'Approche Pragmatique',
       description: 'Solutions juridiques adaptées aux réalités opérationnelles des projets IT',
-      icon: '⚡',
+      icon: Zap,
     },
     {
       title: 'Accompagnement Stratégique',
       description: 'Au-delà du juridique : conseil stratégique pour optimiser vos projets',
-      icon: '🎯',
+      icon: Target,
     },
     {
       title: 'Accessibilité',
       description: 'Avocat moderne et accessible, sans barrière de communication',
-      icon: '🤝',
+      icon: Handshake,
     },
   ]
 
@@ -75,7 +76,9 @@ const ApproachSection: React.FC = () => {
                 className="bg-light/10 backdrop-blur-sm rounded-xl p-6 border border-light/20 hover:bg-light/15 transition-all duration-300"
               >
                 <div className="flex items-start gap-4">
-                  <div className="text-4xl flex-shrink-0">{point.icon}</div>
+                  <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center">
+                    <point.icon className="w-8 h-8 text-primary" strokeWidth={1.5} />
+                  </div>
                   <div>
                     <h3 className="text-xl font-bold text-light mb-2">{point.title}</h3>
                     <p className="text-light/80">{point.description}</p>

@@ -1,42 +1,43 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { Lock, FileText, TrendingUp, Bot, Shield, Database } from 'lucide-react'
 
 interface Expertise {
   title: string
   description: string
-  icon: string
+  icon: React.ComponentType<{ className?: string; strokeWidth?: number }>
 }
 
 const expertiseAreas: Expertise[] = [
   {
     title: 'RGPD & Cybersécurité',
     description: 'Conformité, transferts internationaux, contrôles CNIL',
-    icon: '🔒',
+    icon: Lock,
   },
   {
     title: 'Contrats IT Complexes',
     description: 'Négociation et rédaction de contrats IT sur mesure',
-    icon: '📋',
+    icon: FileText,
   },
   {
     title: 'Due Diligence M&A/TSA',
     description: 'Audit juridique et accompagnement dans les opérations de fusion-acquisition',
-    icon: '📊',
+    icon: TrendingUp,
   },
   {
     title: 'IA Act',
     description: 'Accompagnement sur la réglementation européenne sur l\'intelligence artificielle',
-    icon: '🤖',
+    icon: Bot,
   },
   {
     title: 'DORA',
     description: 'Conformité au règlement européen sur la résilience opérationnelle numérique',
-    icon: '🛡️',
+    icon: Shield,
   },
   {
     title: 'Stratégie Data',
     description: 'Optimisation de la gestion et de la valorisation des données',
-    icon: '💾',
+    icon: Database,
   },
 ]
 
@@ -74,8 +75,8 @@ const ExpertiseGrid: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
               <div className="relative z-10">
-                <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
-                  {expertise.icon}
+                <div className="mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                  <expertise.icon className="w-12 h-12 text-primary" strokeWidth={1.5} />
                 </div>
                 <h3 className="text-xl font-bold text-dark mb-3 group-hover:text-primary transition-colors">
                   {expertise.title}
