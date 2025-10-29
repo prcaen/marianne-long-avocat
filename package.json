@@ -2,12 +2,15 @@
   "name": "marianne-long-avocat",
   "version": "1.0.0",
   "description": "Landing page for Marianne Long - Avocat IT/Data/IA/Cybersécurité",
-  "private": true,
+  "private": false,
+  "homepage": "https://prcaen.github.io/marianne-long-avocat",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "framer-motion": "^10.16.16",
